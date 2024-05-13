@@ -24,3 +24,14 @@ def preencher(produtos):
 #     # cod2 = "1002"
 
 # preencher(preencher)
+
+
+
+
+####  Função que corre toda a lista 'thislist' ####
+
+# thislist = ["apple", "banana", "cherry", "peach"]
+# i = 0
+# while i < len(thislist):
+#     print(thislist[i])
+#     i = i + 1

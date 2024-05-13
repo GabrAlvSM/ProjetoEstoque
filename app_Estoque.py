@@ -1,4 +1,6 @@
+import array
 from sys import exception
+import os
 
 def iniciar(opcao):
     opcao = str(input("Bem vindo!\nJá possui cadastro de usuário? S/N\n-"))
@@ -75,64 +77,64 @@ def menu_prod(opcao):
     print("\nDigite a opção desejada:\n")
     opcao = input("1 - Ver lista de produtos \n2 - Cadastar um novo produto\n-")
 
+
+
+    while(True):
+
+        if opcao == '1':
+            return preencher_prod(list_produtos='')
+
+        elif opcao == '2':
+            return novo_prod(novo_prod)
+        
+        else:
+            fim()
+
+
+def preencher_prod(list_produtos):
+    
     list_produtos = ["Monitor LG", "Smartphone Samsung S23", "Cabo Cat5 10m"]
     list_descprods = ["Monitor LG 144Hz", "Smartphone S23 Camera de 50Mp, 8gm RAM, 256Gb Armazenamento ", "Cabo de rede Cat5 com 10 metros de comprimento"]
     list_quantprods = [50, 100, 70]
 
-    while(True):
+    print("\n--- Lista de produtos ---\n")
 
-        produto = ''
+    # CORRE A LISTA DE PRODUTOS
+    i=0
+    while i < len(list_produtos):
+        print(f"Nome: {list_produtos[i]} \nCod: {i+1} \nDescrição: {list_descprods[i]} \nQuantidade disponível: {list_quantprods[i]}\n")
+        i = i + 1
 
+    print(novo_prod.produto)
 
-        if opcao == '2':
+# AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 
+# FILHA DA PUTA NÃO FUNCIONA QUE ÓDIO
+# COMO A PORRA CHAMA A MERDA DE UMA VARIAVEL DE OUTRA FUNCAO MERDA
 
-            nomeprod = str(input("Digite o nome do produto: "))
-            descprod = str(input("Digite a descrição do produto: "))
-            codigoprod = int(input("Digite o codigo do produto: "))
-            quantprod = int(input("Digite a quantidade de produtos distponíveis: ")) 
-            
-            produto = [nomeprod, descprod, codigoprod, quantprod]
-        
-            #produto = [nomeprod, descprod, codigoprod, quantprod] #print(f"\n\nProduto adicionado: {nomeprod}\nDescrição: {descprod}\nCód: {codigoprod} \nQuantidade em estoque: {quantprod}")
+    return menu_prod(opcao='')
 
-            return menu_prod(menu_prod)
-        
+def novo_prod(produto):
 
-        ####  Função que corre toda a lista 'thislist' ####
-
-        # thislist = ["apple", "banana", "cherry", "peach"]
-        # i = 0
-        # while i < len(thislist):
-        #     print(thislist[i])
-        #     i = i + 1
-
-
-        if opcao == '1':
-            if(produto == ''):
-
-                print("\nLista de produtos:\n")
-                i=0
-                while i < len(list_produtos):
-                    print(f"Nome: {list_produtos[i]} \nDescrição: {list_descprods[i]} \nQuantidade disponível: {list_quantprods[i]}\n")
-                    i = i + 1
-  
-                # print("Nenhum produto registrado!")
-
-                print(produto)
-                return menu_prod(opcao='')
-            else:
-                print(produto)
-                return menu_prod(opcao='')
+    nomeprod = str(input("Digite o nome do produto: "))
+    descprod = str(input("Digite a descrição do produto: "))
+    codigoprod = int(input("Digite o codigo do produto: "))
+    quantprod = int(input("Digite a quantidade de produtos distponíveis: ")) 
+    
+    produto = print(f"\nNome: {nomeprod} \nCod: {codigoprod} \nDescrição: {descprod} \nQuantidade disponível: {quantprod}\n")
+    
+    return menu_prod(produto)
     
 
-            
+def remover_Prod(produto):     
 
+    menu_prod.produto = ""    
+    return menuAdm(menuAdm)
 
 
 def menuAdm(opcao):
     
     print("\n---Bem vindo ao menu de administração---\n\nDigite a opção desejada:")
-    opcao = input("1-Cadastrar novo login\n2-Menu padrão\n-")
+    opcao = input("1-Cadastrar novo login\n2-Menu padrão\n3-Remover Produto\n-")
 
     if opcao == '1':
         return cadastra_usuario(cadastra_usuario)
@@ -140,3 +142,16 @@ def menuAdm(opcao):
     elif opcao == '2':
         return menu_prod(menu_prod)
     
+    else:
+        return remover_Prod(remover_Prod)
+    
+
+
+
+os.system('cls||clear')
+os.system('cls||clear')
+
+
+print("---Sistema de controle de estoque---\n")
+
+iniciar(iniciar)
