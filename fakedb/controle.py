@@ -114,3 +114,20 @@
 #     #         messagebox.showinfo(title="Login Info", message="Welcome! Access acept")
 #     # except:
 #     #     messagebox.showinfo(title="Login info", message="Access denied")
+
+
+
+
+def numeros_digitados(N):
+    N = int(input("Quantos numeros voce vai digitar? "))
+    vet: [str] = [0 for x in range(N)]
+
+    for i in range(0, N):
+        vet[i] = input("Digite um numero: ")
+        
+    print()
+    print("NUMEROS DIGITADOS:")
+    for i in range(0, N):
+        print(f"{vet[i]:.1f}")
+
+numeros_digitados(N='go')

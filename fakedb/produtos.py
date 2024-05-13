@@ -1,12 +1,26 @@
+def preencher(produtos):
+    global lista_produtos
 
-produto1 = "Notebook positivo"
-descr1 = "notebook positivo 8gb ram 128gb ssd"
-cod1 = "1001"
-produto2 = "Smartphone"
-descr2 = "Celultar smartphone"
-cod2 = "1002"
+    nomep = "Nome: "
+    descp = "Descrição"
+    cod = "Cod: "
+    qntp =  "Quantidade disponível: "
 
-conf_produto1 = [produto1, descr1, cod1]
-conf_produto2 = [produto2, descr2, cod2]
+    produto1 = [f"{nomep}Smartphone Motorola \n{descp}Motorola moto edging 02 8gb, 258gb armazenamento \n{cod}2 \n {qntp}30"]
+    produto2 = [f"{nomep}Notebook positivo \n{descp}notebook positivo 8gb ram 128gb ssd \n{cod} 3 \n {qntp}20"]
 
-print(conf_produto1[1])
+    produtos = print(produto1 + "\n" + produto2)
+
+    lista_produtos = produtos
+
+
+
+
+#     # produto1 = "Notebook positivo"
+#     # descr1 = "notebook positivo 8gb ram 128gb ssd"
+#     # cod1 = "1001"
+#     # produto2 = "Smartphone"
+#     # descr2 = "Celultar smartphone"
+#     # cod2 = "1002"
+
+# preencher(preencher)
