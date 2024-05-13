@@ -1,4 +1,3 @@
-import array
 from sys import exception
 import os
 
@@ -105,13 +104,10 @@ def preencher_prod(list_produtos):
         print(f"Nome: {list_produtos[i]} \nCod: {i+1} \nDescrição: {list_descprods[i]} \nQuantidade disponível: {list_quantprods[i]}\n")
         i = i + 1
 
-    print(novo_prod.produto)
-
-# AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 
-# FILHA DA PUTA NÃO FUNCIONA QUE ÓDIO
-# COMO A PORRA CHAMA A MERDA DE UMA VARIAVEL DE OUTRA FUNCAO MERDA
+# NÃO Ë POSSÍVEL CHAMAR O PRODUTO CADASTRADO MANUALMENTE
 
     return menu_prod(opcao='')
+
 
 def novo_prod(produto):
 
