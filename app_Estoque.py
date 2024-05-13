@@ -57,7 +57,7 @@ def usuario_logar(usuario):
         senha = input("Digite sua senha: ")
         if (senha == senha_n_usuario):
             print(f"Bem vindo {novo_usuario}!")
-            return exception
+            return menu_prod(menu_prod)
         
     elif (usuario != novo_usuario and usuario != 'alvin' and usuario != 'Admin'):
         print("Usuário não existente!")
@@ -104,7 +104,7 @@ def preencher_prod(list_produtos):
         print(f"Nome: {list_produtos[i]} \nCod: {i+1} \nDescrição: {list_descprods[i]} \nQuantidade disponível: {list_quantprods[i]}\n")
         i = i + 1
 
-# NÃO Ë POSSÍVEL CHAMAR O PRODUTO CADASTRADO MANUALMENTE
+# NÃO É POSSÍVEL CHAMAR O PRODUTO CADASTRADO MANUALMENTE
 
     return menu_prod(opcao='')
 
