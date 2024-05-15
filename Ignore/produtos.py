@@ -35,3 +35,12 @@ def preencher(produtos):
 # while i < len(thislist):
 #     print(thislist[i])
 #     i = i + 1
+
+#### Adicionar produto SUBSTITUIDO
+
+# nomeprod = str(input("Digite o nome do produto: "))
+# descprod = str(input("Digite a descrição do produto: "))
+# codigoprod = int(input("Digite o codigo do produto: "))
+# quantprod = int(input("Digite a quantidade de produtos distponíveis: ")) 
+
+# produto = print(f"\nNome: {nomeprod} \nCod: {codigoprod} \nDescrição: {descprod} \nQuantidade disponível: {quantprod}\n")
