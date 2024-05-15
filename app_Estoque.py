@@ -71,7 +71,6 @@ def usuario_logar(usuario):
     else:
         print("Usuário não existente!")
         return iniciar(iniciar)
-    
 
 def menu_prod(opcao):
 
