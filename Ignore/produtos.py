@@ -44,3 +44,40 @@ def preencher(produtos):
 # quantprod = int(input("Digite a quantidade de produtos distponíveis: ")) 
 
 # produto = print(f"\nNome: {nomeprod} \nCod: {codigoprod} \nDescrição: {descprod} \nQuantidade disponível: {quantprod}\n")
+
+
+#### editar e adicionar(incompleto) lista de produtos
+
+    
+# editar = input("Deseja editar os itens da lista? S/N\n-")
+
+# if(editar == 'S'):
+#     opt = int(input(f"Qual item deseja editar?\n Quantidade de itens editáveis: {i}\n-"))
+
+#     opt = opt - 1
+
+#     nome_edit = input("Digite o nome do produto: ")
+#     desc_edit = input("Digite a descrição do produto: ")
+#     qnt_edit = input("Informe a quantidade disponível de produtos: ")
+
+#     list_produtos[opt] = nome_edit
+#     list_descprods[opt] = desc_edit
+#     list_quantprods[opt] = qnt_edit
+
+# elif(editar == '2'):
+#     opt = int(input(f"Qual item deseja editar?\n Quantidade de itens editáveis: {i}\n-"))
+
+#     opt = opt - 1
+
+#     nome_nov = input("Digite o nome do produto: ")
+#     desc_novo = input("Digite a descrição do produto: ")
+#     qnt_novo = input("Informe a quantidade disponível de produtos: ")
+
+#     list_produtos.insert(1, nome_nov)
+#     list_descprods.insert(1, desc_novo)
+#     list_quantprods.insert(1, qnt_novo)
+
+
+# else: 
+#     print("Ok\nRetornando para o menu...")
+#     pass

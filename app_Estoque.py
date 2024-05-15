@@ -61,10 +61,6 @@ def usuario_logar(usuario):
             print(f"Bem vindo {novo_usuario}!")
             return menu_prod(menu_prod)
         
-    elif (usuario != novo_usuario and usuario != 'alvin' and usuario != 'Admin'):
-        print("Usuário não existente!")
-        return exception
-    
     elif (usuario == '0'):
         fim()
 
@@ -75,7 +71,7 @@ def usuario_logar(usuario):
 def menu_prod(opcao):
 
     print("\nDigite a opção desejada:\n")
-    opcao = input("1 - Ver lista de produtos \n2 - Cadastar um novo produto\n-")
+    opcao = input("1 - Ver lista de produtos \n2 - Cadastar ou editar produto\n-")
 
 
 
@@ -100,49 +96,28 @@ def preencher_prod(i):
     while i < len(list_produtos):
         print(f"Nome: {list_produtos[i]} \nCod: {i+1} \nDescrição: {list_descprods[i]} \nQuantidade disponível: {list_quantprods[i]}\n")
         i = i + 1
-    
-    # editar = input("Deseja editar os itens da lista? S/N\n-")
-    
-    # if(editar == 'S'):
-    #     opt = int(input(f"Qual item deseja editar?\n Quantidade de itens editáveis: {i}\n-"))
-
-    #     opt = opt - 1
-
-    #     nome_edit = input("Digite o nome do produto: ")
-    #     desc_edit = input("Digite a descrição do produto: ")
-    #     qnt_edit = input("Informe a quantidade disponível de produtos: ")
-
-    #     list_produtos[opt] = nome_edit
-    #     list_descprods[opt] = desc_edit
-    #     list_quantprods[opt] = qnt_edit
-    
-    # elif(editar == '2'):
-    #     opt = int(input(f"Qual item deseja editar?\n Quantidade de itens editáveis: {i}\n-"))
-
-    #     opt = opt - 1
-
-    #     nome_nov = input("Digite o nome do produto: ")
-    #     desc_novo = input("Digite a descrição do produto: ")
-    #     qnt_novo = input("Informe a quantidade disponível de produtos: ")
-
-    #     list_produtos.insert(1, nome_nov)
-    #     list_descprods.insert(1, desc_novo)
-    #     list_quantprods.insert(1, qnt_novo)
-
-
-    # else: 
-    #     print("Ok\nRetornando para o menu...")
-    #     pass
 
     return menu_prod(opcao='')
 
 
 def edit_prod(editar):
 
-    i=0
-    editar = input("Deseja editar os itens da lista? S/N\n-")
+    i = len(list_produtos)
 
-    if(editar == 'S'):
+    editar = input("1- Adicionar novo produto \n2- Editar produto s\n-")
+
+    if(editar == '1'):
+        print(f"--Por favor digite o nome, descrição e quantidade de produtos--\n Quantidade de itens na lista: {i}\n-")
+
+        nome_nov = input("Digite o nome do produto: ")
+        desc_novo = input("Digite a descrição do produto: ")
+        qnt_novo = input("Informe a quantidade disponível de produtos: ")
+
+        list_produtos.insert(i+1, nome_nov)
+        list_descprods.insert(i+1, desc_novo)
+        list_quantprods.insert(i+1, qnt_novo)
+    
+    elif(editar == '2'):
         opt = int(input(f"Qual item deseja editar?\n Quantidade de itens editáveis: {i}\n-"))
 
         opt = opt - 1
@@ -154,19 +129,6 @@ def edit_prod(editar):
         list_produtos[opt] = nome_edit
         list_descprods[opt] = desc_edit
         list_quantprods[opt] = qnt_edit
-    
-    elif(editar == '2'):
-        print(f"--Por favor digite o nome, descrição e quantidade de produtos--\n Quantidade de itens na lista: {i}\n-")
-
-        nome_nov = input("Digite o nome do produto: ")
-        desc_novo = input("Digite a descrição do produto: ")
-        qnt_novo = input("Informe a quantidade disponível de produtos: ")
-
-        list_produtos.insert(-1, nome_nov)
-        list_descprods.insert(-1, desc_novo)
-        list_quantprods.insert(-1, qnt_novo)
-
-
     
     return menu_prod(opcao='')
     
