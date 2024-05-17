@@ -1,4 +1,3 @@
-from sys import exception
 import os
 
 list_produtos = ["Monitor LG", "Smartphone Samsung S23", "Cabo Cat5 10m"]
