@@ -112,9 +112,9 @@ def edit_prod(editar):
         desc_novo = input("Digite a descrição do produto: ")
         qnt_novo = input("Informe a quantidade disponível de produtos: ")
 
-        list_produtos.insert(i+1, nome_nov)
-        list_descprods.insert(i+1, desc_novo)
-        list_quantprods.insert(i+1, qnt_novo)
+        list_produtos.append(nome_nov)
+        list_descprods.append(desc_novo)
+        list_quantprods.append(qnt_novo)
     
     elif(editar == '2'):
         opt = int(input(f"Qual item deseja editar?\n Quantidade de itens editáveis: {i}\n-"))
